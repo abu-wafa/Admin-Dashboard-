@@ -1,0 +1,31 @@
+.dataTable {
+  .dataGrid {
+    // padding: 20px;
+    .css-1e8d8dc-MuiDataGrid-toolbar {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+    .MuiDataGrid-cell {
+      display: flex;
+      align-items: center;
+    }
+    .cellAction {
+      gap: 10px;
+    }
+    .cellAction > div {
+      cursor: pointer;
+    }
+    .cellAction,
+    .cellAction > a,
+    .cellAction > div {
+      display: flex;
+    }
+    img.Avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}

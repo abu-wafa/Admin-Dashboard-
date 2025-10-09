@@ -1,0 +1,94 @@
+.single {
+  display: flex;
+  .view {
+    flex: 1;
+    .info {
+      .topInfo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        h2 {
+          font-size: 20px;
+          text-transform: capitalize;
+        }
+        button {
+          cursor: pointer;
+          padding: 5px;
+          background-color: #f054cc;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          color: #e0dde0;
+        }
+      }
+      .details {
+        font-size: 15px;
+        .item {
+          margin-bottom: 20px;
+          .itemTitle {
+            font-weight: 600;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+    .charts {
+      width: 90%;
+      height: 250px;
+    }
+  }
+  hr {
+    width: 90%;
+    border: 0.5px solid lightgray;
+    height: 0;
+    margin: 20px 0;
+  }
+  .activities {
+    flex: 1;
+    h3 {
+      margin-bottom: 20px;
+    }
+    ul {
+      li {
+        list-style: none;
+        position: relative;
+        width: 1px;
+        background-color: #f45b69;
+        padding-top: 50px;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          transform: translate(-50%, 5px);
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #f45b69;
+        }
+        div {
+          min-width: 400px;
+          background-color: #f45b6810;
+          padding: 10px;
+          height: 100%;
+          p {
+            font-size: 13px;
+            color: lightgray;
+            margin-top: 5px;
+          }
+          time {
+            font-size: 10px;
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.product {
+  .info {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 20px;
+    button {
+      padding: 6px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: #536689;
+        color: white;
+      }
+    }
+  }
+}

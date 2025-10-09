@@ -1,0 +1,79 @@
+@import "../../styles/variables.scss";
+.add {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.724);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .model {
+    background-color: $main-bg;
+    padding: 50px;
+    border-radius: 10px;
+    position: relative;
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 6px;
+      &:hover {
+        color: red;
+        border: 1px solid red;
+        border-radius: 50%;
+      }
+    }
+    h1 {
+      font-size: 25px;
+      text-transform: capitalize;
+    }
+    #form {
+      margin-top: 20px;
+      display: flex;
+      max-width: 500px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .item {
+        margin-bottom: 10px;
+        width: 45%;
+
+        label {
+          font-size: 14px;
+          gap: 10px;
+          display: flex;
+          flex-direction: column;
+
+          input {
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            background-color: transparent;
+            color: white;
+            outline: none;
+          }
+        }
+      }
+      button {
+        width: 100%;
+        border: none;
+        padding: 10px;
+        background-color: $soft-bg;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: $dark-bg;
+        }
+      }
+    }
+  }
+}
