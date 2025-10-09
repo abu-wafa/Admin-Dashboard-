@@ -1,7 +1,7 @@
-@import "../../styles/responsive.scss";
+@use "../../styles/responsive.scss" as res;
 .single {
   display: flex;
-  @include respond-to("lg") {
+  @include res.respond-to("lg") {
     flex-direction: column;
     gap: 20px;
   }
@@ -48,7 +48,7 @@
     .charts {
       width: 90%;
       height: 250px;
-      @include respond-to("md") {
+      @include res.respond-to("md") {
         display: none;
       }
     }
@@ -58,7 +58,7 @@
     border: 0.5px solid lightgray;
     height: 0;
     margin: 20px 0;
-    @include respond-to("md") {
+    @include res.respond-to("md") {
       display: none;
     }
   }
@@ -86,9 +86,6 @@
           background-color: #f45b69;
         }
         div {
-          @include respond-to("sm") {
-            min-width: 200px;
-          }
           min-width: 320px;
           background-color: #f45b6810;
           padding: 10px;
@@ -101,6 +98,9 @@
           time {
             font-size: 10px;
             color: gray;
+          }
+          @include res.respond-to("sm") {
+            min-width: 200px;
           }
         }
       }

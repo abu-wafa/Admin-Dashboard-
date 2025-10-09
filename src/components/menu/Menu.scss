@@ -1,5 +1,5 @@
-@import "../../styles/variables.scss";
-@import "../../styles/responsive.scss";
+@use "../../styles/variables.scss" as vrb;
+@use "../../styles/responsive.scss" as res;
 
 .menu .item {
   display: flex;
@@ -9,9 +9,9 @@
   .title {
     font-size: 13px;
     font-weight: 200;
-    color: $soft-color;
+    color: vrb.$soft-color;
     text-transform: uppercase;
-    @include respond-to("sm") {
+    @include res.respond-to("sm") {
       display: none;
     }
   }
@@ -24,7 +24,7 @@
     border-radius: 5px;
     transition: 0.3s ease-in-out;
     .listitemTitle {
-      @include respond-to("sm") {
+      @include res.respond-to("sm") {
         display: none;
       }
     }
@@ -32,7 +32,7 @@
       width: 15px;
     }
     &:hover {
-      background-color: $soft-bg;
+      background-color: vrb.$soft-bg;
     }
   }
 }

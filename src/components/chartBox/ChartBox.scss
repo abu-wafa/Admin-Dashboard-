@@ -1,10 +1,10 @@
-@import "../../styles/responsive.scss";
+@use "../../styles/responsive.scss" as res;
 .chartBox {
   display: flex;
   height: 100%;
   font-size: 13px;
   padding: 5px 0;
-  @include respond-to("sm") {
+  @include res.respond-to("sm") {
     flex-direction: column;
     gap: 10px;
   }
@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: space-between;
     flex: 3;
-    @include respond-to("sm") {
+    @include res.respond-to("sm") {
       gap: 10px;
     }
     .boxTitle {

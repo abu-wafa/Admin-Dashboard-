@@ -4,6 +4,7 @@ import { GridColDef } from "@mui/x-data-grid";
 import { useState } from "react";
 import Add from "../../src/components/add/Add";
 import { useQuery } from "@tanstack/react-query";
+import Loader from "../../src/components/loader/Loader";
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
   {
@@ -74,7 +75,7 @@ export default function Products() {
         <button onClick={() => setopen(true)}>Add New product</button>
       </div>
       {isPending ? (
-        "Loading...."
+        <Loader color={"#1976d2"} />
       ) : (
         <DataTable slug={"products"} columns={columns} rows={data} />
       )}

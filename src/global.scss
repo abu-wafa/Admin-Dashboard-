@@ -1,4 +1,4 @@
-@import "./styles/variables.scss";
+@use "./styles/variables.scss" as vars;
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +6,8 @@
 }
 html {
   font-family: "inter", sans-serif;
-  background-color: $main-bg;
-  color: $main-color;
+  background-color: vars.$main-bg;
+  color: vars.$main-color;
 }
 a {
   text-decoration: none;

@@ -1,5 +1,5 @@
-@import "./styles/variables.scss";
-@import "./styles/responsive.scss";
+@use "./styles/variables.scss" as vars;
+@use "./styles/responsive.scss" as res;
 
 .container {
   display: flex;
@@ -7,12 +7,12 @@
 .menuContainer {
   width: 200px;
   padding: 0px 20px;
-  border-right: 2px solid $soft-bg;
-  @include respond-to("sm") {
+  border-right: 2px solid vars.$soft-bg;
+  @include res.respond-to("sm") {
     width: fit-content;
     padding: 0px 10px;
   }
-  @include respond-to("nano") {
+  @include res.respond-to("nano") {
     padding: 0;
   }
 }
@@ -20,10 +20,10 @@
 .contentContainer {
   width: 100%;
   padding: 5px 20px;
-  @include respond-to("sm") {
+  @include res.respond-to("sm") {
     padding: 0px 10px;
   }
-  @include respond-to("nano") {
+  @include res.respond-to("nano") {
     padding: 3px;
   }
 }

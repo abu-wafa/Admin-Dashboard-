@@ -1,4 +1,4 @@
-@import "../../styles/responsive.scss";
+@use "../../styles/responsive.scss" as res;
 .navbar {
   display: flex;
   width: 100%;
@@ -17,7 +17,7 @@
   .icons {
     gap: 20px;
     .exp {
-      @include respond-to("sm") {
+      @include res.respond-to("sm") {
         display: none;
       }
     }

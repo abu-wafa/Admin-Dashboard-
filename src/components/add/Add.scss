@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@use "../../styles/variables.scss" as vars;
 .add {
   position: absolute;
   width: 100vw;
@@ -11,7 +11,7 @@
   justify-content: center;
 
   .model {
-    background-color: $main-bg;
+    background-color: vars.$main-bg;
     padding: 50px;
     border-radius: 10px;
     position: relative;
@@ -63,7 +63,7 @@
         width: 100%;
         border: none;
         padding: 10px;
-        background-color: $soft-bg;
+        background-color: vars.$soft-bg;
         color: white;
         font-weight: bold;
         cursor: pointer;
@@ -71,7 +71,7 @@
         margin-top: 20px;
         transition: all 0.3s ease;
         &:hover {
-          background-color: $dark-bg;
+          background-color: vars.$dark-bg;
         }
       }
     }
