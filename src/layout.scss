@@ -1,4 +1,5 @@
 @import "./styles/variables.scss";
+@import "./styles/responsive.scss";
 
 .container {
   display: flex;
@@ -7,8 +8,22 @@
   width: 200px;
   padding: 0px 20px;
   border-right: 2px solid $soft-bg;
+  @include respond-to("sm") {
+    width: fit-content;
+    padding: 0px 10px;
+  }
+  @include respond-to("nano") {
+    padding: 0;
+  }
 }
+
 .contentContainer {
   width: 100%;
   padding: 5px 20px;
+  @include respond-to("sm") {
+    padding: 0px 10px;
+  }
+  @include respond-to("nano") {
+    padding: 3px;
+  }
 }

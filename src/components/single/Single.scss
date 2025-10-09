@@ -1,5 +1,11 @@
+@import "../../styles/responsive.scss";
 .single {
   display: flex;
+  @include respond-to("lg") {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .view {
     flex: 1;
     .info {
@@ -42,6 +48,9 @@
     .charts {
       width: 90%;
       height: 250px;
+      @include respond-to("md") {
+        display: none;
+      }
     }
   }
   hr {
@@ -49,6 +58,9 @@
     border: 0.5px solid lightgray;
     height: 0;
     margin: 20px 0;
+    @include respond-to("md") {
+      display: none;
+    }
   }
   .activities {
     flex: 1;
@@ -74,7 +86,10 @@
           background-color: #f45b69;
         }
         div {
-          min-width: 400px;
+          @include respond-to("sm") {
+            min-width: 200px;
+          }
+          min-width: 320px;
           background-color: #f45b6810;
           padding: 10px;
           height: 100%;
