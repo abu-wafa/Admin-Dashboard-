@@ -1,5 +1,5 @@
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from "recharts";
-import "./PieChart.scss";
+import "./pieChart.scss";
 const data = [
   { name: "Google", value: 400, color: "#8884d8" },
   { name: "Facebook", value: 300, color: "#82ca9d" },
