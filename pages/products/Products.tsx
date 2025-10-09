@@ -5,6 +5,7 @@ import { useState } from "react";
 import Add from "../../src/components/add/Add";
 import { useQuery } from "@tanstack/react-query";
 import Loader from "../../src/components/loader/Loader";
+import { products } from "../../src/data";
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
   {
@@ -77,7 +78,11 @@ export default function Products() {
       {isPending ? (
         <Loader color={"#1976d2"} />
       ) : (
-        <DataTable slug={"products"} columns={columns} rows={data} />
+        <DataTable
+          slug={"products"}
+          columns={columns}
+          rows={data || products}
+        />
       )}
       {open && <Add slug="products" setOpen={setopen} columns={columns} />}
     </div>
