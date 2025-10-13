@@ -1,7 +1,6 @@
 import "./products.scss";
 import DataTable from "../../src/components/dataTable/dataTable";
 import { GridColDef } from "@mui/x-data-grid";
-import { useState } from "react";
 import Add from "../../src/components/add/Add";
 import { useQuery } from "@tanstack/react-query";
 import Loader from "../../src/components/loader/Loader";
