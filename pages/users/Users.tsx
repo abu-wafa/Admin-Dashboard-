@@ -1,7 +1,6 @@
 import "./users.scss";
 import DataTable from "../../src/components/dataTable/dataTable"; // Adjust the path as needed
 import { GridColDef } from "@mui/x-data-grid";
-import { useState } from "react";
 import Add from "../../src/components/add/Add";
 import { useQuery } from "@tanstack/react-query";
 import Loader from "../../src/components/loader/Loader";
@@ -65,8 +64,7 @@ const columns: GridColDef[] = [
 ];
 
 export default function Users() {
-  const { Base_url } = useGlobalContext()!;
-  const [open, setopen] = useState(false);
+  const { Base_url, open, setopen } = useGlobalContext()!;
   const { isPending, data } = useQuery({
     queryKey: ["allusers"],
     queryFn: () => fetch(Base_url + "users").then((res) => res.json()),

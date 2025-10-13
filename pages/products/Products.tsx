@@ -6,6 +6,7 @@ import Add from "../../src/components/add/Add";
 import { useQuery } from "@tanstack/react-query";
 import Loader from "../../src/components/loader/Loader";
 import { products } from "../../src/data";
+import { useGlobalContext } from "../../src/context";
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
   {
@@ -63,11 +64,10 @@ const columns: GridColDef[] = [
 ];
 
 export default function Products() {
-  const [open, setopen] = useState(false);
+  const { Base_url, open, setopen } = useGlobalContext()!;
   const { isPending, data } = useQuery({
     queryKey: ["allproducts"],
-    queryFn: () =>
-      fetch("http://localhost:8800/api/products").then((res) => res.json()),
+    queryFn: () => fetch(Base_url + "products").then((res) => res.json()),
   });
   return (
     <div className="product">
