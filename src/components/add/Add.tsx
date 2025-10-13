@@ -1,5 +1,6 @@
-import { GridColDef } from "@mui/x-data-grid";
 import "./Add.scss";
+import { useGlobalContext } from "../../context.tsx";
+import { GridColDef } from "@mui/x-data-grid";
 import { Dispatch, SetStateAction, useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
@@ -10,11 +11,12 @@ type Props = {
 };
 
 function Add(props: Props) {
+  const { Base_url } = useGlobalContext()!;
   const [formData, setformData] = useState({});
   const queryClient = useQueryClient();
   const mutation = useMutation({
     mutationFn: () => {
-      return fetch("http://localhost:8800/api/" + props.slug, {
+      return fetch(Base_url + props.slug, {
         method: "Post",
         headers: {
           Accept: "application/json",

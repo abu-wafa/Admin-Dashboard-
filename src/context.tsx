@@ -10,7 +10,7 @@ interface ContextProps {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const Context: React.FC<ContextProps> = ({ children }) => {
-  const Base_url = "http://localhost:8800/api";
+  const Base_url = "http://localhost:8800/api/";
   return (
     <AppContext.Provider value={{ Base_url }}>{children}</AppContext.Provider>
   );

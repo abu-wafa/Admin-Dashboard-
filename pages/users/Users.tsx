@@ -6,6 +6,7 @@ import Add from "../../src/components/add/Add";
 import { useQuery } from "@tanstack/react-query";
 import Loader from "../../src/components/loader/Loader";
 import { userRows } from "../../src/data";
+import { useGlobalContext } from "../../src/context";
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
   {
@@ -64,11 +65,11 @@ const columns: GridColDef[] = [
 ];
 
 export default function Users() {
+  const { Base_url } = useGlobalContext()!;
   const [open, setopen] = useState(false);
   const { isPending, data } = useQuery({
     queryKey: ["allusers"],
-    queryFn: () =>
-      fetch("http://localhost:8800/api/users").then((res) => res.json()),
+    queryFn: () => fetch(Base_url + "users").then((res) => res.json()),
   });
   return (
     <div className="user">
