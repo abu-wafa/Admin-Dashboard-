@@ -82,14 +82,16 @@ Follow these steps to set up the project locally.
 
 You need to have **Node.js** (v16+ recommended) and **npm** installed on your system.
 
-### Installation
+### Installation 
 
 Clone the repository and install the necessary dependencies:
 
 ```sh
-# Replace 'your-repo-name' with the actual repository name
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd your-repo-name
-npm installgit clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd your-repo-name
+
+git clone [https://github.com/abu-wafa/Admin-Dashboard](https://github.com/abu-wafa/Admin-Dashboard)
+cd Admin-Dashboard
 npm install
+npm run dev
+http://localhost:5173
+
+```
