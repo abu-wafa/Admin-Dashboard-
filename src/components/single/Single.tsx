@@ -27,9 +27,7 @@ function Single(props: Props) {
       <div className="view">
         <div className="info">
           <div className="topInfo">
-            {props.img && (
-              <img src={props.img} alt="userimgs" className="itemImg" />
-            )}
+            <img src={props.img || "https://i.ibb.co/MBtjqXQ/no-avatar.gif"} alt="userimgs" className="itemImg" />  
             <h2>{props.title}</h2>
             <button>Update</button>
           </div>

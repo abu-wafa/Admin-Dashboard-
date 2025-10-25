@@ -575,16 +575,7 @@ export const products = [
 ];
 
 export const singleUser = {
-  id: 1,
-  title: "Abulwafa",
-  img: "/user.png",
-  info: {
-    username: "Abdowafa99",
-    fullname: "Abdo wafa",
-    email: "Abdowafa@gmail.com",
-    phone: "123 456 789",
-    status: "verified",
-  },
+  
   chart: {
     dataKeys: [
       { name: "visits", color: "#82ca9d" },
@@ -662,16 +653,7 @@ export const singleUser = {
   ],
 };
 export const singleProduct = {
-  id: 1,
-  title: "Playstation 5 Digital Edition",
-  img: "https://store.sony.com.au/on/demandware.static/-/Sites-sony-master-catalog/default/dw1b537bbb/images/PLAYSTATION5W/PLAYSTATION5W.png",
-  info: {
-    productId: "Ps5SDF1156d",
-    color: "white",
-    price: "$250.99",
-    producer: "Sony",
-    export: "Japan",
-  },
+  
   chart: {
     dataKeys: [
       { name: "visits", color: "#82ca9d" },

@@ -13,7 +13,6 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const Context: React.FC<ContextProps> = ({ children }) => {
   const Base_url = import.meta.env.VITE_API_BASE;
-  console.log(Base_url);
 
   const [open, setopen] = useState(false);
 
